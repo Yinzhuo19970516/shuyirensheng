@@ -13,8 +13,8 @@
     </image>
   </view>
   <view class="content">
-    <picker mode="date" value="1997-1-1" bindchange="bindDateChange">
-      <van-cell title="出生日期" is-link value=" {{dataText}}" border="{{false}}" />
+    <picker mode="date" value="1997-1-1" end="{{endData}}"   bindchange="bindDateChange">
+      <van-cell title="出生日期" is-link value="{{dataText}}" border="{{false}}" />
     </picker>
     <view class="button-sp-area">
       <button type="primary" bindtap="computed">内容揭秘</button>

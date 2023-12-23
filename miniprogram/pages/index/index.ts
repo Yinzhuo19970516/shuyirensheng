@@ -1,7 +1,10 @@
+import { formatTimestamp } from '../../utils/util.js'
+
 Page({
   data: {
     dataText: '请选择公历日期',
     show: false,
+    endData: formatTimestamp(Date.now(), 'YYYY-MM-DD'),
     obj: {
       id: '',
       name: '',
@@ -46,28 +49,12 @@ Page({
       })
       
       setTimeout( ()=> {
-       
-    // 在弹窗打开时，将 scrollTop 设置为初始值 0
-    // const query = wx.createSelectorQuery();
-    // query.select('.van-popup').fields({scrollTop: true},  (res)=> {
-    //   if (true) {   
-    //     console.log(222)
-     
-    //   }
-    // }).exec();
         wx.hideLoading()
         this.setData({
           show: true,
           obj: getApp().globalData.myObject[value]
         })
-        wx.pageScrollTo({
-          selector:'.chartar-box',
-          scrollTop: 0,
-          duration: 300
-        })
       }, this.generateRandomNumber())
-      
-      
     }
   },
   calculateBirthNumber(date) {
