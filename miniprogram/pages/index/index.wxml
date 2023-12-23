@@ -1,0 +1,64 @@
+<!--index.wxml-->
+<page-meta page-style="{{ show ? 'overflow: hidden;' : '' }}" />
+<navigation-bar title="主性格测试" back="{{false}}" color="black" background="#FFF">
+</navigation-bar>
+<view class="container">    
+  <view class="header">
+    <image class="header-img" src="../../image/header-bg.jpg">
+      <view class="header-btn">
+        主性格
+      </view>
+      <view class="header-tips">预测未来  把握现在</view>
+      <view class="header-tips"></view>
+    </image>
+  </view>
+  <view class="content">
+    <picker mode="date" value="1997-1-1" bindchange="bindDateChange">
+      <van-cell title="出生日期" is-link value=" {{dataText}}" border="{{false}}" />
+    </picker>
+    <view class="button-sp-area">
+      <button type="primary" bindtap="computed">内容揭秘</button>
+    </view>
+    <text class="button-tips">万物皆数，数字生命密码是你生命的导航</text>
+    <view wx:if="{{show}}">
+    <van-popup
+      show="{{ show }}"
+      round
+      position="bottom"
+      closeable="{{true}}"
+      custom-style="height: 70%"
+      bind:open="onOpen"
+      bind:close="onClose"
+    >
+    <view class="chartar-box" >
+      <view class="chartar-box-name">您是{{obj.name}}</view>
+      <view class="chartar-box-border">
+        <text class="chartar-box-title">正面/反面</text>
+        <view class="chartar-box-content">{{obj.advantage}}</view>
+        <view class="chartar-box-content ">{{obj.disadvantage}}</view>
+      </view>
+      <view class="chartar-box-border">
+        <text class="chartar-box-title">{{obj.name}}的特质：{{obj.keyword}}</text>
+        <view class="chartar-box-content">基本特质：</view>
+        <view class="chartar-box-content">{{obj.baseDes}}</view>
+        <rich-text nodes="{{obj.detail}}" class="chartar-box-content"></rich-text>
+
+      </view>
+      <view class="chartar-box-border">
+        <text class="chartar-box-title">{{obj.name}}的性格</text>
+        <rich-text nodes="{{obj.chartar}}" class="chartar-box-content"></rich-text>
+      </view>
+      <view class="chartar-box-border">
+        <text class="chartar-box-title">{{obj.name}}的天赋才能</text>
+        <rich-text nodes="{{obj.talent}}" class="chartar-box-content"></rich-text>
+      </view>
+    </view>
+  
+    
+    <view class="button-sp-area-1" wx:if="{{show}}">
+      <button open-type="contact" type="primary" plain="true">你说的不对</button>
+    </view>
+    </van-popup>
+  </view>
+  </view>
+</view>

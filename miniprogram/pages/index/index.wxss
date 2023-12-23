@@ -1,0 +1,124 @@
+/**index.wxss**/
+@import '../lib/common.wxss';
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.header-img {
+  width: 100vw;
+  height: 440rpx;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-btn {
+  position: absolute;
+  z-index: 2;
+  margin: 0 auto;
+  height: 100rpx;
+  background: var(--background-image) no-repeat;
+  background-size: 100% 100%; 
+  font-weight: 700;
+  width: 420rpx;
+  color: green;
+  font-size: 48rpx;
+  display: flex;
+  top: 100rpx;
+  left: 0%;
+  right: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-tips {
+  position: absolute;
+  z-index: 2;
+  top: 220rpx;
+  left: 0%;
+  right: 0%;
+  margin: 0 auto;
+  text-align: center;
+  color: #333333;
+  font-size: 28rpx;
+}
+.header-tips-1 {
+  top: 280rpx;
+}
+.content {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  background-color: white;
+  border-radius: 40rpx 40rpx 0 0;
+  z-index: 2;
+  margin-top: -34rpx;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20rpx;
+}
+
+.button-sp-area {
+  width: 60%;
+  margin: 180rpx auto 0;
+}
+.button-sp-area-1 {
+  width: 60%;
+  margin: 40rpx auto 40rpx;
+}
+.button-tips{
+  color: #d3d3d3;
+  font-size: 20rpx;
+  text-align: center;
+  margin-top: 10rpx;
+}
+.chartar-box {
+  box-sizing: content-box;
+  padding: 80rpx 40rpx;
+}
+.chartar-box-name {
+  font-weight: 700;
+  color: #377D39;
+  font-size: 48rpx;
+  text-align: center;
+  text-shadow: 2px 2px 4px #57915A;
+}
+.chartar-box-border {
+    position: relative;
+    padding: 20rpx 20rpx;
+    border: 1rpx solid #377D39;
+    margin: 40rpx auto 0;
+    border-radius: 10rpx;
+}
+.chartar-box-title {
+  margin-bottom: 20rpx;
+  display: inline-block;
+  font-weight: 700;
+  color:#377D39;
+  vertical-align: top;
+  font-size: 36rpx;
+  height: 42rpx;
+  line-height: 42rpx;
+}
+.chartar-box-title:before{
+  content: " ";
+  display: inline-block;
+  background: linear-gradient(90deg,#377D39 0%,#FFF 100%);
+  margin-right: 10rpx;
+  vertical-align: top;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+}
+.chartar-box-content {
+  color:#262626;
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 20rpx;
+}
