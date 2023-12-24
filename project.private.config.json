@@ -4,7 +4,8 @@
   "setting": {
     "compileHotReLoad": true,
     "urlCheck": true,
-    "preloadBackgroundData": true,
-    "autoAudits": true
+    "preloadBackgroundData": false,
+    "autoAudits": true,
+    "useIsolateContext": false
   }
 }
