@@ -17,6 +17,15 @@ Page({
       talent:''
     }
   },
+  onShareAppMessage() {
+    return {
+      title: '守护天使',
+      path: '/pages/index/index'
+    }
+  },
+  onShareTimeline() {
+
+  },
   bindDateChange(e) {
     this.setData({
       dataText: e.detail.value,
