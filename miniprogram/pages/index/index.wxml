@@ -2,6 +2,8 @@
 <page-meta page-style="{{ show ? 'overflow: hidden;' : '' }}" />
 <navigation-bar title="主性格测试" back="{{false}}" color="black" background="#FFF">
 </navigation-bar>
+<button bindtap="showDialog">显示弹窗</button>
+
 <view class="container">    
   <view class="header">
     <image class="header-img" src="../../image/header-bg.jpg">
@@ -62,3 +64,10 @@
   </view>
   </view>
 </view>
+
+  <dialog title="提示" content="这是一个弹窗组件" 
+    showDialog="{{showDialog}}"   bind:close="handleClose">
+  </dialog>
+
+
+

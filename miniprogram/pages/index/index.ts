@@ -2,6 +2,7 @@ import { formatTimestamp } from '../../utils/util.js'
 
 Page({
   data: {
+    showDialog: false,
     dataText: '请选择公历日期',
     show: false,
     endData: formatTimestamp(Date.now(), 'YYYY-MM-DD'),
@@ -17,9 +18,15 @@ Page({
       talent:''
     }
   },
+  showDialog() {
+    this.setData({ showDialog: true });
+  },
+  handleClose() {
+    this.setData({ showDialog: false });
+  },
   onShareAppMessage() {
     return {
-      title: '守护天使',
+      title: '测测你命中注定的性格类型',
       path: '/pages/index/index'
     }
   },
@@ -42,8 +49,8 @@ Page({
     this.setData({
       show: false
     })
-
   },
+  
   computed() {
     if(this.data.dataText === '请选择公历日期') {
       wx.showToast({

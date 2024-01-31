@@ -1,0 +1,61 @@
+<!--pages/gift.wxml-->
+<page-meta>
+<navigation-bar title="守护天使" back="{{false}}" color="black" background="#FFF">
+</navigation-bar>
+<view class="container">
+  <view class="userinfo">
+  <block wx:if="{{!hasUserInfo}}">
+    <button class="logo" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"></button>
+    <view wx:else> 请使用2.10.4及以上版本基础库 </view>
+  </block>
+  <block wx:else>
+    <image src="{{userInfo.avatarUrl}}" mode="cover" class="userinfo-avatar"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </block>
+  </view>
+  <van-cell-group inset>
+  <van-field
+    value="{{ username }}"
+    required
+    clearable
+    label="收件人"
+    placeholder="请输入收件人姓名"
+    bind:click-icon="onClickIcon"
+  />
+  <van-field
+    value="{{ phone }}"
+    label="联系电话"
+    required
+    clearable
+    maxlength="11"
+    placeholder="请输入手机号"
+    border="{{ true }}"
+  />
+  <van-field
+    value="{{ address }}"
+    label="收件地址"
+    type="textarea"
+    required
+    clearable
+    placeholder="请填写省市区街道门牌号详细地址"
+    autosize="{{ autoSizeData1 }}"
+    border="{{ true }}"
+  />
+  <van-field
+    value="{{ message }}"
+    label="留言"
+    type="textarea"
+    required
+    clearable
+    placeholder="写一段自我介绍，方便你的守护天使为你挑选礼物。当然，你也可以直接写下你的愿望！说不定Ta会帮你实现呢？！"
+    autosize="{{ autoSizeData2 }}"
+    border="{{ false }}"
+  />
+  </van-cell-group>
+  <view class="footer">
+    <van-button round type="primary" size="large">参加活动</van-button>
+    <view class="tips">请填写收件信息，用于守护天使给你寄送礼物。该信息只会展示给你的守护天使，其它任何人都无法以任何方式获取。在活动结束后，信息也将全部销毁。
+    </view>
+  </view>
+</view>
+</page-meta>

@@ -103,6 +103,16 @@ App({
       }
     }
   },
-  onLaunch() {
-  },
+  onLaunch: function() {
+    wx.cloud.init({
+      env: 'test-2gw7n5v98a896a21', // 替换为你的环境ID
+      traceUser: true,
+    }),
+    wx.login({
+      success: res => {
+        console.log(res.code)
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+      },
+    })
+  }
 })

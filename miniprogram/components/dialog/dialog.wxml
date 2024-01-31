@@ -1,0 +1,6 @@
+<view wx:if="{{showDialog}}"  class="dialog-mask" bindtap="hideDialog">
+  <view class="dialog" id="dialog">
+    <view class="dialog-title">{{ title }}</view>
+    <view class="dialog-content">{{ content }}</view>
+  </view>
+</view>

@@ -7,5 +7,26 @@
     "preloadBackgroundData": false,
     "autoAudits": true,
     "useIsolateContext": false
+  },
+  "libVersion": "2.24.1",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/gift/gift",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }
